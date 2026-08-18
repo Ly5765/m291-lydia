@@ -2,7 +2,6 @@
 Je suis médiamaticienne.
 ## Ce que je veux apprendre
 - Créer des interfaces
-M291 • Fiche d'atelier • e1-1 — Mon repo
 - Apprendre à utiliser l'IA pour coder.
 - Apprendre à faire une petite application fonctionnelle.
 ## Mon projet 
