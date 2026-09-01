@@ -49,6 +49,7 @@
   </main>
   <script>
     const liste = document.getElementById("liste");
+    liste.addEventListener("dragover", function (e) { e.preventDefault(); });
 
     liste.addEventListener("dragstart", function (e) {
       const ligne = e.target.closest("li");
