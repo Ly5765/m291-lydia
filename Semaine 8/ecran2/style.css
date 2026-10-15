@@ -1,0 +1,514 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050d17;
+  color: #f6f8fc;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+#app {
+  width: min(100%, 480px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px 20px 100px;
+  background:
+    radial-gradient(ellipse at top right, #0b1b2b 0, transparent 38%),
+    #050d17;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: -1.5px;
+}
+
+.logo-blue {
+  color: #2586ff;
+}
+
+.profile-button,
+.arrow-button,
+.topbar-back,
+.topbar-action {
+  display: inline-grid;
+  min-width: 48px;
+  min-height: 48px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #62baff;
+  font-size: 25px;
+}
+
+.search {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  border: 1px solid #31465d;
+  border-radius: 14px;
+  background: #142235;
+  color: #b9c9dc;
+}
+
+.search > span {
+  font-size: 21px;
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  background: transparent;
+}
+
+.search input::placeholder {
+  color: #aebdd0;
+}
+
+h2 {
+  margin: 28px 0 14px;
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.moods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mood-button {
+  display: flex;
+  min-height: 96px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px;
+  border: 1px solid #31465d;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #19334c, #102033);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mood-button[data-mood="Drôle"] {
+  background: linear-gradient(145deg, #60421f, #292013);
+}
+
+.mood-button[data-mood="Effrayant"] {
+  background: linear-gradient(145deg, #16404a, #101d2a);
+}
+
+.mood-button[data-mood="Romantique"] {
+  background: linear-gradient(145deg, #602b48, #281828);
+}
+
+.mood-button[data-mood="Qui fait réfléchir"] {
+  background: linear-gradient(145deg, #293d68, #17233d);
+}
+
+.mood-button.selected {
+  border: 2px solid #2586ff;
+  background: #0649c7;
+}
+
+.mood-icon {
+  font-size: 28px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.section-heading h2 {
+  margin: 0 0 14px;
+}
+
+.arrow-button {
+  margin-top: -8px;
+  color: #62baff;
+  font-size: 30px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 12px;
+}
+
+.movie-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f6f8fc;
+  text-align: left;
+}
+
+.poster {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 0.72;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 9px;
+  border: 1px solid #29445b;
+  border-radius: 11px;
+  background: linear-gradient(155deg, #176b84, #0a1c2d 65%, #02070d);
+  box-shadow: inset 0 -55px 40px -28px #000000;
+}
+
+.poster.cercle {
+  background: radial-gradient(circle, #ff442b 0 20%, #8d0c10 21% 38%, #220b10 70%);
+}
+
+.poster.gone-girl {
+  background: linear-gradient(145deg, #263947, #a27e66 48%, #101b24);
+}
+
+.poster.sixieme-sens {
+  background: radial-gradient(ellipse at 50% 35%, #f7a344, #512516 40%, #100c0c 75%);
+}
+
+.poster.interstellar {
+  background: linear-gradient(160deg, #a6d5e5, #506577 45%, #101820);
+}
+
+.poster.batman {
+  background: linear-gradient(145deg, #82898b, #252b31 48%, #05080c);
+}
+
+.poster.intouchables {
+  background: linear-gradient(145deg, #5d7c71, #263d38 52%, #111b1a);
+}
+
+.poster.diner {
+  background: linear-gradient(145deg, #80543a, #3b2923 52%, #14100e);
+}
+
+.poster.lalaland {
+  background: linear-gradient(145deg, #8f536f, #39345d 52%, #121323);
+}
+
+.poster-title {
+  padding: 5px 6px;
+  border-radius: 4px;
+  background: #050d17;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.movie-card strong {
+  display: block;
+  overflow: hidden;
+  margin: 8px 0 5px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-meta {
+  display: block;
+  margin-bottom: 6px;
+  color: #b9c9dc;
+  font-size: 11px;
+}
+
+.mood-tag {
+  display: inline-block;
+  max-width: 100%;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #073c91;
+  color: #eaf4ff;
+  font-size: 10px;
+  white-space: normal;
+}
+
+.movie-description {
+  display: block;
+  max-height: 2.8em;
+  overflow: hidden;
+  margin-top: 7px;
+  color: #d3deeb;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  color: #f6f8fc;
+  line-height: 1.5;
+}
+
+.page-topbar {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.topbar-back,
+.topbar-action {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.topbar-logo {
+  margin: 0;
+  font-size: 25px;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  margin: 16px -20px 24px;
+  padding: 2px 20px 8px;
+}
+
+.filter-chip {
+  min-height: 44px;
+  flex: 0 0 auto;
+  padding: 0 15px;
+  border: 1px solid #31465d;
+  border-radius: 14px;
+  background: #142235;
+  color: #f6f8fc;
+  font-size: 13px;
+}
+
+.filter-chip.is-selected {
+  border-color: #2586ff;
+  background: #0649c7;
+  color: #ffffff;
+}
+
+.results-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.results-heading h2 {
+  margin: 0 0 5px;
+}
+
+.results-count {
+  margin: 0;
+  color: #aebdd0;
+  font-size: 14px;
+}
+
+.sort-label {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #142235;
+  color: #f6f8fc;
+  font-size: 12px;
+}
+
+.detail-topbar {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.detail-cover {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 0;
+  aspect-ratio: auto;
+}
+
+.detail-cover .poster-title {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+}
+
+.play-icon {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  place-items: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #050d17;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.movie-detail h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  color: #f6f8fc;
+  font-size: 16px;
+}
+
+.detail-meta span[aria-hidden="true"] {
+  color: #62baff;
+  font-size: 20px;
+}
+
+.detail-tag {
+  margin-bottom: 14px;
+}
+
+.movie-detail h2 {
+  margin: 20px 0 8px;
+  font-size: 20px;
+}
+
+.detail-description {
+  margin: 0 0 22px;
+  color: #e1e8f1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.detail-primary,
+.detail-secondary {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 12px;
+  border-radius: 13px;
+  font-weight: bold;
+}
+
+.detail-primary {
+  border: 0;
+  background: #0649c7;
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.detail-secondary {
+  border: 1px solid #2586ff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.bottom-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #1d3042;
+  background: #07111d;
+}
+
+.bottom-nav-inner {
+  display: flex;
+  width: min(100%, 480px);
+  justify-content: space-around;
+  padding: 10px 8px 16px;
+}
+
+.nav-item {
+  display: grid;
+  min-width: 72px;
+  min-height: 48px;
+  gap: 4px;
+  justify-items: center;
+  border: 0;
+  background: transparent;
+  color: #aebdd0;
+  font-size: 11px;
+}
+
+.nav-item span:first-child {
+  font-size: 21px;
+}
+
+.nav-item.active {
+  color: #2586ff;
+}
+
+button:focus,
+input:focus {
+  outline: 4px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 360px) {
+  #app {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .filter-chips {
+    margin-right: -16px;
+    margin-left: -16px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .mood-button {
+    min-height: 88px;
+    font-size: 11px;
+  }
+
+  .sort-label {
+    padding: 8px;
+    font-size: 11px;
+  }
+}
