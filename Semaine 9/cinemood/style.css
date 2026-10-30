@@ -1,0 +1,893 @@
+
+/* =========================================
+   CINEMOOD — DESIGN SYSTEM
+   Palette 60-30-10 : brun sombre, chocolat,
+   orange chaud. Ivoire réservé au texte.
+   ========================================= */
+
+:root {
+  /* Palette 60-30-10 : 60 % fond, 30 % surfaces, 10 % accent. */
+  --color-bg: #120D0B;
+  --color-surface: #211612;
+  --color-surface-raised: #302019;
+  --color-surface-hover: #3D281E;
+  --color-text: #FFF3E6;
+  --color-text-muted: #D2BFB0;
+  --color-accent: #F18A43;
+  --color-accent-hover: #F5A45D;
+  --color-border: #594034;
+
+  /* Typographie */
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-title: 1.75rem;
+
+  /* Espacements par multiples de 8 px */
+  --space-unit: 8px;
+  --space-1: var(--space-unit);
+  --space-2: calc(var(--space-unit) * 2);
+  --space-3: calc(var(--space-unit) * 3);
+  --space-4: calc(var(--space-unit) * 4);
+  --space-5: calc(var(--space-unit) * 5);
+
+  /* Formes et mise en page */
+  --radius-small: 8px;
+  --radius-card: 12px;
+  --radius-large: 16px;
+  --page-width: 760px;
+  --transition: 160ms ease;
+}
+
+/* =========================================
+   1. BASE ET ACCESSIBILITÉ
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 16px;
+}
+
+body {
+  min-width: 280px;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 84px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+img {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+/* =========================================
+   2. EN-TÊTE
+   ========================================= */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: min(100%, var(--page-width));
+  min-height: 68px;
+  margin-inline: auto;
+  padding: 10px 20px;
+}
+
+.logo {
+  color: var(--color-text);
+  font-size: clamp(1.6rem, 6vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+.icon-button {
+  display: inline-flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 2rem;
+}
+
+.icon-button:hover {
+  background: var(--color-surface-raised);
+}
+
+.back-icon {
+  font-size: 1.8rem;
+}
+
+.search-icon {
+  font-size: 2.1rem;
+}
+
+/* =========================================
+   3. STRUCTURE DES ÉCRANS
+   ========================================= */
+
+.screen {
+  width: min(100%, var(--page-width));
+  margin-inline: auto;
+  padding: 0 20px 28px;
+}
+
+.screen > section {
+  min-width: 0;
+}
+
+/* =========================================
+   4. BARRE DE RECHERCHE
+   ========================================= */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.search-box:focus-within {
+  border-color: var(--color-accent);
+}
+
+.search-box > span {
+  flex: 0 0 auto;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.search-box input {
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 8px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.search-box input:focus-visible {
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+/* =========================================
+   5. MOODS DE L'ACCUEIL
+   ========================================= */
+
+.mood-section {
+  margin-top: 26px;
+}
+
+.mood-section h1,
+.section-heading h2,
+.results-heading h1 {
+  margin: 0;
+  font-size: clamp(var(--font-size-large), 5vw, var(--font-size-title));
+  letter-spacing: -0.5px;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.mood-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 112px;
+  padding: 12px 4px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-card);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: clamp(0.7rem, 2.7vw, 0.9rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  overflow-wrap: anywhere;
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    filter var(--transition);
+}
+
+.mood-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  filter: brightness(1.1);
+}
+
+.mood-symbol {
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.mood-comfort,
+.mood-funny,
+.mood-scary,
+.mood-romantic,
+.mood-thought,
+.mood-mystery {
+  background: linear-gradient(145deg, var(--color-surface-raised), var(--color-surface) 85%);
+}
+
+/* =========================================
+   6. TITRES DE SECTIONS
+   ========================================= */
+
+.film-section {
+  min-width: 0;
+  margin-top: 32px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.text-button {
+  display: inline-flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--color-text);
+  font-size: 2rem;
+}
+
+.text-button:hover {
+  background: var(--color-surface-raised);
+}
+
+/* =========================================
+   7. GRILLE DES FILMS
+   ========================================= */
+
+.film-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: var(--space-3) var(--space-2);
+  width: 100%;
+  min-width: 0;
+}
+
+.film-card {
+  min-width: 0;
+}
+
+.film-card-button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.film-card-button:hover .poster {
+  border-color: var(--color-accent);
+  filter: brightness(1.1);
+}
+
+.film-card-button:hover .film-title {
+  color: var(--color-accent);
+}
+
+/* =========================================
+   8. AFFICHES : PROPORTIONS IDENTIQUES
+   ========================================= */
+
+.poster {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 3 / 4;
+  padding: 10px 5px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  text-align: center;
+  transition:
+    filter var(--transition),
+    border-color var(--transition);
+}
+
+.poster::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(145deg, var(--color-surface-raised), var(--color-bg));
+  content: "";
+}
+
+.poster.has-image::before {
+  background: linear-gradient(180deg, transparent 42%, var(--color-bg) 100%);
+}
+
+.poster-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: 100%;
+  color: var(--color-text);
+  font-size: clamp(0.6rem, 2.4vw, 0.85rem);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 6px var(--color-bg);
+}
+
+/* =========================================
+   9. TEXTES DES CARTES : ALIGNEMENT
+   ========================================= */
+
+.film-title {
+  display: -webkit-box;
+  min-width: 0;
+  min-height: 2.6em;
+  margin: 8px 0 2px;
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.film-year {
+  display: block;
+  min-height: 1.2em;
+  margin: 0 0 6px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  line-height: 1.3;
+}
+
+/* Les badges sont alignés en bas des cartes */
+.mood-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 26px;
+  margin-top: auto;
+  padding: 4px 8px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+/* =========================================
+   10. FILTRES DE RECHERCHE
+   ========================================= */
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 28px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 9px 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: var(--color-text);
+  line-height: 1.3;
+  text-align: center;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-accent);
+}
+
+.filter-chip[data-mood] {
+  border-color: var(--color-border);
+  background: var(--color-surface);
+}
+
+.filter-chip[data-mood]:hover {
+  border-color: var(--color-accent);
+}
+
+.filter-chip[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+.results-heading {
+  align-items: flex-end;
+}
+
+.results-heading > div {
+  min-width: 0;
+}
+
+.muted {
+  margin: 5px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.sort-label select {
+  max-width: 145px;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+/* =========================================
+   11. FICHE DÉTAILLÉE
+   ========================================= */
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0 0 8px -8px;
+  padding: 8px;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.detail-back:hover {
+  background: var(--color-surface-raised);
+}
+
+.detail-poster {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  background: linear-gradient(135deg, var(--color-surface-raised), var(--color-bg));
+}
+
+.detail-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-content {
+  min-width: 0;
+  padding: 12px 2px 20px;
+}
+
+.detail-content h1 {
+  margin: 8px 0;
+  font-size: clamp(2rem, 8vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.metadata {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-text-muted);
+}
+
+.metadata span[aria-hidden="true"] {
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+
+.detail-content > .mood-badge {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.description-title {
+  margin: 24px 0 6px;
+  font-size: 1.1rem;
+}
+
+.description {
+  margin: 8px 0 20px;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.primary-button,
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-card);
+  font-weight: 700;
+  text-align: center;
+  transition:
+    filter var(--transition),
+    background var(--transition);
+}
+
+.primary-button {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.primary-button:hover {
+  filter: brightness(1.1);
+}
+
+.secondary-button {
+  border-color: var(--color-accent);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.secondary-button:hover {
+  background: var(--color-surface-raised);
+}
+
+/* =========================================
+   12. NAVIGATION INFÉRIEURE
+   ========================================= */
+
+.bottom-nav {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding:
+    8px max(12px, env(safe-area-inset-right))
+    calc(8px + env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  backdrop-filter: blur(14px);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  min-height: 54px;
+  padding: 5px;
+  border: 0;
+  border-radius: var(--radius-small);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+.nav-item span {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.nav-item:hover {
+  background: var(--color-surface-raised);
+}
+
+.nav-item.active {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* =========================================
+   13. PETITS ÉCRANS
+   ========================================= */
+
+@media (max-width: 360px) {
+  .topbar {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .screen {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .mood-grid {
+    gap: 8px;
+  }
+
+  .mood-tile {
+    min-height: 100px;
+    padding: 8px 3px;
+    font-size: 0.68rem;
+  }
+
+  .mood-symbol {
+    font-size: 1.7rem;
+  }
+
+  .film-grid {
+    column-gap: var(--space-1);
+    row-gap: var(--space-3);
+  }
+
+  .film-title {
+    font-size: 0.8rem;
+  }
+
+  .mood-badge {
+    gap: 2px;
+    padding: 4px 5px;
+    font-size: 0.64rem;
+  }
+
+  .sort-label select {
+    max-width: 125px;
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+}
+
+/* =========================================
+   14. TABLETTES ET ORDINATEURS
+   ========================================= */
+
+@media (min-width: 600px) {
+  body {
+    padding-bottom: 24px;
+  }
+
+  .topbar {
+    padding: 16px 28px;
+  }
+
+  .screen {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .mood-tile {
+    min-height: 135px;
+    font-size: 0.95rem;
+  }
+
+  .film-grid {
+    column-gap: var(--space-2);
+    row-gap: var(--space-3);
+  }
+
+  .poster {
+    border-radius: var(--radius-card);
+  }
+
+  .film-title {
+    font-size: var(--font-size-small);
+  }
+
+  .bottom-nav {
+    position: static;
+    width: min(calc(100% - 40px), var(--page-width));
+    margin: 24px auto 0;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+  }
+}
+
+@media (min-width: 768px) {
+  .film-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --page-width: 900px;
+  }
+
+  .screen {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+
+  .mood-grid {
+    gap: 16px;
+  }
+
+  .film-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3) var(--space-2);
+  }
+
+  .detail-poster {
+    max-height: 440px;
+  }
+}
+
+/* =========================================
+   15. RESPECT DES PRÉFÉRENCES UTILISATEUR
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

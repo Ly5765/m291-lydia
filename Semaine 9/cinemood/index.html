@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#120D0B">
+  <title>CineMood — Le cinéma selon ton humeur</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-button back-icon" id="back-button"
+      type="button" aria-label="Retour" hidden>←</button>
+    <a class="logo" href="#" id="logo">Cine<span>Mood</span></a>
+    <button class="icon-button search-icon" id="search-button"
+      type="button" aria-label="Aller à la recherche">⌕</button>
+  </header>
+
+  <main>
+    <section id="home-screen" class="screen">
+      <div class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="home-search" type="search"
+          placeholder="Rechercher un film, un genre..."
+          aria-label="Rechercher un film ou un genre">
+      </div>
+
+      <section class="mood-section" aria-labelledby="mood-heading">
+        <h1 id="mood-heading">Quel mood ce soir ?</h1>
+        <div class="mood-grid">
+          <button class="mood-tile mood-comfort" data-mood="Réconfortant">
+            <span class="mood-symbol" aria-hidden="true">☕</span>
+            <span>Réconfortant</span>
+          </button>
+          <button class="mood-tile mood-funny" data-mood="Drôle">
+            <span class="mood-symbol" aria-hidden="true">😂</span>
+            <span>Drôle</span>
+          </button>
+          <button class="mood-tile mood-scary" data-mood="Effrayant">
+            <span class="mood-symbol" aria-hidden="true">😱</span>
+            <span>Effrayant</span>
+          </button>
+          <button class="mood-tile mood-romantic" data-mood="Romantique">
+            <span class="mood-symbol" aria-hidden="true">❤️</span>
+            <span>Romantique</span>
+          </button>
+          <button class="mood-tile mood-thought" data-mood="Qui fait réfléchir">
+            <span class="mood-symbol" aria-hidden="true">🤔</span>
+            <span>Qui fait réfléchir</span>
+          </button>
+          <button class="mood-tile mood-mystery" data-mood="Mystérieux">
+            <span class="mood-symbol" aria-hidden="true">🫆</span>
+            <span>Mystérieux</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="film-section" aria-labelledby="home-films-heading">
+        <div class="section-heading">
+          <h2 id="home-films-heading">Films pour toi</h2>
+          <button id="all-films-button" class="text-button"
+            type="button" aria-label="Voir tous les films">→</button>
+        </div>
+        <div id="home-films" class="film-grid home-grid"></div>
+      </section>
+    </section>
+
+    <section id="search-screen" class="screen" hidden>
+      <div class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="film-search" type="search"
+          placeholder="Rechercher un film, un genre..."
+          aria-label="Rechercher dans les films">
+      </div>
+
+      <aside id="filter-list" class="filter-list" aria-label="Filtrer par mood"></aside>
+
+      <div class="section-heading results-heading">
+        <div>
+          <h1>Films pour toi</h1>
+          <p id="results-count" class="muted"></p>
+        </div>
+        <label class="sort-label">
+          <span class="sr-only">Trier les films</span>
+          <select id="sort-select">
+            <option value="popular">Populaires</option>
+            <option value="title">Ordre alphabétique</option>
+            <option value="recent">Plus récents</option>
+          </select>
+        </label>
+      </div>
+      <div id="search-films" class="film-grid"></div>
+      <p id="empty-message" class="muted" hidden>Aucun film trouvé. Essaie un autre mood ou une autre recherche.</p>
+    </section>
+
+    <section id="detail-screen" class="screen" hidden>
+      <button class="detail-back" id="detail-back" type="button">← Retour</button>
+      <div id="detail-poster" class="detail-poster"
+        role="img" aria-label="Image du film"></div>
+      <div class="detail-content">
+        <h1 id="detail-title">Inception</h1>
+        <p class="metadata">
+          <span aria-hidden="true">🗓️</span>
+          <span id="detail-year">2010</span>
+          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">🕚</span>
+          <span id="detail-duration">2h 28min</span>
+        </p>
+        <p id="detail-mood" class="mood-badge"> Mystérieux</p>
+        <h2 class="description-title">Synopsis</h2>
+        <p id="detail-description" class="description"></p>
+        <button id="watch-button" class="primary-button" type="button">
+          ▶ &nbsp; Voir le film
+        </button>
+        <button id="home-button" class="secondary-button" type="button">
+         ⌂ &nbsp; Retour à l'accueil
+        </button>
+        <p id="watch-message" class="muted" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="bottom-nav" aria-label="Navigation principale">
+      <button class="nav-item active" id="nav-home" type="button">
+        <span aria-hidden="true">⌂</span>Accueil
+      </button>
+      <button class="nav-item" id="nav-search" type="button">
+        <span aria-hidden="true">⌕</span>Recherche
+      </button>
+      <button class="nav-item" id="nav-profile" type="button">
+        <span aria-hidden="true">♙</span>Profil
+      </button>
+    </nav>
+  </footer>
+</body>
+</html>
+
