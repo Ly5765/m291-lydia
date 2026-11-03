@@ -1,0 +1,273 @@
+
+[
+  {
+    "id": 1,
+    "titre": "Inception",
+    "annee": 2010,
+    "duree": "2h28",
+    "mood": "Mystérieux",
+    "affiche": "image/inception.jpg",
+    "description": "Un voleur spécialisé dans l'extraction de secrets entre dans les rêves pour accomplir une mission particulièrement difficile."
+  },
+  {
+    "id": 2,
+    "titre": "Le Cercle",
+    "annee": 2002,
+    "duree": "1h55",
+    "mood": "Effrayant",
+    "affiche": "image/cercle.jpg",
+    "description": "Une journaliste enquête sur une mystérieuse cassette vidéo liée à des événements inquiétants."
+  },
+  {
+    "id": 3,
+    "titre": "Gone Girl",
+    "annee": 2014,
+    "duree": "2h29",
+    "mood": "Qui fait réfléchir",
+    "affiche": "image/gone-girl.jpg",
+    "description": "Lorsqu'une femme disparaît, son mari devient le principal suspect et les apparences commencent à se fissurer."
+  },
+  {
+    "id": 4,
+    "titre": "Sixième sens",
+    "annee": 1999,
+    "duree": "1h47",
+    "mood": "Effrayant",
+    "affiche": "image/sixieme-sens.jpg",
+    "description": "Un psychologue tente d'aider un jeune garçon qui affirme voir des personnes décédées."
+  },
+  {
+    "id": 5,
+    "titre": "Interstellar",
+    "annee": 2014,
+    "duree": "2h49",
+    "mood": "Qui fait réfléchir",
+    "affiche": "image/interstellar.jpg",
+    "description": "Une équipe d'explorateurs part à la recherche d'une nouvelle planète habitable pour sauver l'humanité."
+  },
+  {
+    "id": 6,
+    "titre": "The Batman",
+    "annee": 2022,
+    "duree": "2h56",
+    "mood": "Effrayant",
+    "affiche": "image/batman.jpg",
+    "description": "Batman enquête sur une série de crimes mystérieux dans une ville plongée dans la corruption."
+  },
+  {
+    "id": 7,
+    "titre": "Le Fabuleux Destin d'Amélie Poulain",
+    "annee": 2001,
+    "duree": "2h02",
+    "mood": "Réconfortant",
+    "affiche": "image/amelie.jpg",
+    "description": "Une jeune femme décide de rendre les gens autour d'elle plus heureux grâce à de petites attentions."
+  },
+  {
+    "id": 8,
+    "titre": "Intouchables",
+    "annee": 2011,
+    "duree": "1h52",
+    "mood": "Drôle",
+    "affiche": "image/intouchables.jpg",
+    "description": "Une amitié inattendue se développe entre un homme riche devenu tétraplégique et son auxiliaire de vie."
+  },
+  {
+    "id": 9,
+    "titre": "Orgueil et Préjugés",
+    "annee": 2005,
+    "duree": "2h09",
+    "mood": "Romantique",
+    "affiche": "image/orgueil-prejuges.jpg",
+    "description": "Elizabeth Bennet découvre que ses premières impressions sur un homme mystérieux peuvent être trompeuses."
+  },
+  {
+    "id": 10,
+    "titre": "Shutter Island",
+    "annee": 2010,
+    "duree": "2h18",
+    "mood": "Mystérieux",
+    "affiche": "image/shutter-island.jpg",
+    "description": "Deux enquêteurs se rendent sur une île pour retrouver une patiente disparue d'un hôpital psychiatrique."
+  },
+  {
+    "id": 11,
+    "titre": "Get Out",
+    "annee": 2017,
+    "duree": "1h44",
+    "mood": "Effrayant",
+    "affiche": "image/get-out.jpg",
+    "description": "Un jeune homme découvre des comportements inquiétants lors de sa visite dans la famille de sa petite amie."
+  },
+  {
+    "id": 12,
+    "titre": "The Truman Show",
+    "annee": 1998,
+    "duree": "1h43",
+    "mood": "Qui fait réfléchir",
+    "affiche": "image/truman-show.jpg",
+    "description": "Un homme commence à douter de la réalité de son quotidien et de son entourage."
+  },
+  {
+    "id": 13,
+    "titre": "Paddington",
+    "annee": 2014,
+    "duree": "1h35",
+    "mood": "Réconfortant",
+    "affiche": "image/paddington.jpg",
+    "description": "Un petit ours venu du Pérou trouve une famille qui l'accueille à Londres."
+  },
+  {
+    "id": 14,
+    "titre": "Very Bad Trip",
+    "annee": 2009,
+    "duree": "1h40",
+    "mood": "Drôle",
+    "affiche": "image/very-bad-trip.jpg",
+    "description": "Après une soirée mouvementée à Las Vegas, trois amis tentent de retrouver le futur marié."
+  },
+  {
+    "id": 15,
+    "titre": "La La Land",
+    "annee": 2016,
+    "duree": "2h08",
+    "mood": "Romantique",
+    "affiche": "image/la-la-land.jpg",
+    "description": "Une actrice et un musicien tombent amoureux tout en poursuivant leurs rêves à Los Angeles."
+  },
+  {
+    "id": 16,
+    "titre": "Seven",
+    "annee": 1995,
+    "duree": "2h07",
+    "mood": "Mystérieux",
+    "affiche": "image/seven.jpg",
+    "description": "Deux policiers enquêtent sur un tueur qui organise ses crimes autour des sept péchés capitaux."
+  },
+  {
+    "id": 17,
+    "titre": "Conjuring",
+    "annee": 2013,
+    "duree": "1h52",
+    "mood": "Effrayant",
+    "affiche": "image/conjuring.jpg",
+    "description": "Une famille demande de l'aide après avoir vécu des phénomènes inquiétants dans sa maison."
+  },
+  {
+    "id": 18,
+    "titre": "Forrest Gump",
+    "annee": 1994,
+    "duree": "2h22",
+    "mood": "Réconfortant",
+    "affiche": "image/forrest-gump.jpg",
+    "description": "Un homme au grand cœur raconte les événements extraordinaires qui ont marqué sa vie."
+  },
+  {
+    "id": 19,
+    "titre": "Le Dîner de cons",
+    "annee": 1998,
+    "duree": "1h20",
+    "mood": "Drôle",
+    "affiche": "image/diner-de-cons.jpg",
+    "description": "Un dîner organisé entre amis prend une tournure inattendue à cause d'un invité particulièrement attachant."
+  },
+  {
+    "id": 20,
+    "titre": "Titanic",
+    "annee": 1997,
+    "duree": "3h14",
+    "mood": "Romantique",
+    "affiche": "image/titanic.jpg",
+    "description": "Deux jeunes gens de milieux différents tombent amoureux à bord d'un célèbre paquebot."
+  },
+  {
+    "id": 21,
+    "titre": "Prisoners",
+    "annee": 2013,
+    "duree": "2h33",
+    "mood": "Mystérieux",
+    "affiche": "image/prisoners.jpg",
+    "description": "Après la disparition de deux enfants, un père mène sa propre enquête pour les retrouver."
+  },
+  {
+    "id": 22,
+    "titre": "Ça",
+    "annee": 2017,
+    "duree": "2h15",
+    "mood": "Effrayant",
+    "affiche": "image/ca.jpg",
+    "description": "Un groupe d'enfants affronte une créature terrifiante qui prend souvent l'apparence d'un clown."
+  },
+  {
+    "id": 23,
+    "titre": "The Intouchables",
+    "annee": 2011,
+    "duree": "1h52",
+    "mood": "Réconfortant",
+    "affiche": "image/intouchables.jpg",
+    "description": "Une rencontre improbable transforme profondément la vie de deux hommes."
+  },
+  {
+    "id": 24,
+    "titre": "Le Loup de Wall Street",
+    "annee": 2013,
+    "duree": "3h00",
+    "mood": "Drôle",
+    "affiche": "image/loup-wall-street.jpg",
+    "description": "Un courtier ambitieux connaît une ascension spectaculaire dans le monde de la finance."
+  },
+  {
+    "id": 25,
+    "titre": "Nos étoiles contraires",
+    "annee": 2014,
+    "duree": "2h05",
+    "mood": "Romantique",
+    "affiche": "image/nos-etoiles-contraires.jpg",
+    "description": "Deux adolescents se rencontrent dans un groupe de soutien et développent une relation profonde."
+  },
+  {
+    "id": 26,
+    "titre": "Memento",
+    "annee": 2000,
+    "duree": "1h53",
+    "mood": "Qui fait réfléchir",
+    "affiche": "image/memento.jpg",
+    "description": "Un homme qui ne peut plus créer de nouveaux souvenirs cherche à découvrir la vérité sur un crime."
+  },
+  {
+    "id": 27,
+    "titre": "A Quiet Place",
+    "annee": 2018,
+    "duree": "1h30",
+    "mood": "Effrayant",
+    "affiche": "image/quiet-place.jpg",
+    "description": "Une famille doit vivre dans le silence pour échapper à des créatures attirées par le bruit."
+  },
+  {
+    "id": 28,
+    "titre": "Le Roi Lion",
+    "annee": 1994,
+    "duree": "1h28",
+    "mood": "Réconfortant",
+    "affiche": "image/roi-lion.jpg",
+    "description": "Un jeune lion apprend à accepter son destin et à retrouver sa place dans le royaume."
+  },
+  {
+    "id": 29,
+    "titre": "Astérix et Obélix : Mission Cléopâtre",
+    "annee": 2002,
+    "duree": "1h47",
+    "mood": "Drôle",
+    "affiche": "image/asterix-cleopatre.jpg",
+    "description": "Astérix et Obélix aident un architecte à construire un palais en Égypte dans un délai impossible."
+  },
+  {
+    "id": 30,
+    "titre": "Before Sunrise",
+    "annee": 1995,
+    "duree": "1h41",
+    "mood": "Romantique",
+    "affiche": "image/before-sunrise.jpg",
+    "description": "Deux jeunes voyageurs se rencontrent dans un train et décident de passer une nuit ensemble à Vienne."
+  }
+]

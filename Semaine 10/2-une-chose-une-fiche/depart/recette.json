@@ -1,0 +1,16 @@
+[{
+  "id": 1,
+  "nom": "Taboulé",
+  "personnes": 4 ,
+  "minutes": 20 ,
+  "vegetarien": true,
+  "difficulte": "facile"
+},
+{
+  "id": 2,
+  "nom": "Gratin",
+  "personnes": 6 ,
+  "minutes": 45 ,
+  "vegetarien": false,
+  "difficulte": "moyen"
+}]
