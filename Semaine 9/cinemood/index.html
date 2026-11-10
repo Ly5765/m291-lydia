@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#120D0B">
+  <meta name="theme-color" content="#481225">
   <title>CineMood — Le cinéma selon ton humeur</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="topbar">
@@ -63,6 +62,7 @@
           <button id="all-films-button" class="text-button"
             type="button" aria-label="Voir tous les films">→</button>
         </div>
+        <p id="etat" class="muted" role="status"></p>
         <div id="home-films" class="film-grid home-grid"></div>
       </section>
     </section>
@@ -91,8 +91,9 @@
           </select>
         </label>
       </div>
-      <div id="search-films" class="film-grid"></div>
-      <p id="empty-message" class="muted" hidden>Aucun film trouvé. Essaie un autre mood ou une autre recherche.</p>
+      <div id="liste-cartes" class="film-grid"></div>
+      <p id="search-status" class="muted" role="status" hidden></p>
+      <p id="empty-message" class="muted" role="status" hidden>Aucun film trouvé. Essaie un autre mood ou une autre recherche.</p>
     </section>
 
     <section id="detail-screen" class="screen" hidden>
@@ -135,6 +136,8 @@
       </button>
     </nav>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
 

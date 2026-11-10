@@ -200,12 +200,12 @@
   },
   {
     "id": 23,
-    "titre": "The Intouchables",
-    "annee": 2011,
-    "duree": "1h52",
+    "titre": "Coco",
+    "annee": 2017,
+    "duree": "1h45",
     "mood": "Réconfortant",
-    "affiche": "image/intouchables.jpg",
-    "description": "Une rencontre improbable transforme profondément la vie de deux hommes."
+    "affiche": "image/coco.jpg",
+    "description": "Un jeune garçon passionné de musique se retrouve au pays des morts et part à la recherche de son arrière-arrière-grand-père."
   },
   {
     "id": 24,

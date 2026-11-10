@@ -1,21 +1,20 @@
 
 /* =========================================
    CINEMOOD — DESIGN SYSTEM
-   Palette 60-30-10 : brun sombre, chocolat,
-   orange chaud. Ivoire réservé au texte.
+   Palette rouge et rose, sans noir ni orange.
    ========================================= */
 
 :root {
-  /* Palette 60-30-10 : 60 % fond, 30 % surfaces, 10 % accent. */
-  --color-bg: #120D0B;
-  --color-surface: #211612;
-  --color-surface-raised: #302019;
-  --color-surface-hover: #3D281E;
-  --color-text: #FFF3E6;
-  --color-text-muted: #D2BFB0;
-  --color-accent: #F18A43;
-  --color-accent-hover: #F5A45D;
-  --color-border: #594034;
+  /* Palette rouge et rose à contraste renforcé. */
+  --color-bg: #481225;
+  --color-surface: #66152F;
+  --color-surface-raised: #841B3E;
+  --color-surface-hover: #A6274F;
+  --color-text: #FFF4F7;
+  --color-text-muted: #F0B8C8;
+  --color-accent: #FFAAC0;
+  --color-accent-hover: #FFC2D3;
+  --color-border: #C44A6C;
 
   /* Typographie */
   --font-sans: Arial, Helvetica, sans-serif;
@@ -551,7 +550,7 @@ img {
 .filter-chip[aria-pressed="true"] {
   border-color: var(--color-accent);
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: #481225;
   font-weight: 700;
 }
 
@@ -681,7 +680,7 @@ img {
 
 .primary-button {
   background: var(--color-accent);
-  color: var(--color-bg);
+  color: #481225;
 }
 
 .primary-button:hover {
