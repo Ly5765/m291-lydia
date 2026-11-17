@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phare : les endroits calmes encore ouverts</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Phare</h1>
+    <p>Les endroits calmes encore ouverts ce soir, près de chez vous.</p>
+  </header>
+
+  <main>
+    <label for="recherche">Chercher un lieu ou un quartier</label>
+    <input type="search" id="recherche">
+    <button type="button" id="filtre-ouvert" aria-pressed="false">Ouvert maintenant</button>
+    <p id="aucun-resultat" hidden>Aucun lieu ne correspond à votre recherche.</p>
+
+    <section id="liste-cartes" aria-label="Lieux"></section>
+  </main>
+
+  <script src="lieux.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

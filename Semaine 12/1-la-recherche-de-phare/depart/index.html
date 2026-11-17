@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phare : les endroits calmes encore ouverts</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Phare</h1>
+    <p>Les endroits calmes encore ouverts ce soir, près de chez vous.</p>
+  </header>
+
+  <main>
+    <form id="proposer">
+      <h2>Proposer un lieu</h2>
+      <label for="champ-nom">Nom du lieu</label>
+      <input type="text" id="champ-nom" name="nom">
+      <label for="champ-quartier">Quartier</label>
+      <input type="text" id="champ-quartier" name="quartier">
+      <p id="erreurs" aria-live="polite"></p>
+      <button type="submit">Proposer</button>
+    </form>
+
+    <section id="liste-cartes" aria-label="Lieux"></section>
+  </main>
+
+  <script src="lieux.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

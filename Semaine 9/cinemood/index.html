@@ -70,9 +70,9 @@
     <section id="search-screen" class="screen" hidden>
       <div class="search-box">
         <span aria-hidden="true">⌕</span>
+        <label for="film-search" class="sr-only">Chercher un film, un mood ou une année</label>
         <input id="film-search" type="search"
-          placeholder="Rechercher un film, un genre..."
-          aria-label="Rechercher dans les films">
+          placeholder="Rechercher un film, un genre...">
       </div>
 
       <aside id="filter-list" class="filter-list" aria-label="Filtrer par mood"></aside>
@@ -94,6 +94,16 @@
       <div id="liste-cartes" class="film-grid"></div>
       <p id="search-status" class="muted" role="status" hidden></p>
       <p id="empty-message" class="muted" role="status" hidden>Aucun film trouvé. Essaie un autre mood ou une autre recherche.</p>
+
+      <form id="proposer">
+        <h2>Proposer un film</h2>
+        <label for="champ-titre">Titre du film</label>
+        <input type="text" id="champ-titre" name="titre">
+        <label for="champ-annee">Année de sortie</label>
+        <input type="text" id="champ-annee" name="annee" inputmode="numeric">
+        <p id="erreurs" aria-live="polite"></p>
+        <button type="submit">Proposer</button>
+      </form>
     </section>
 
     <section id="detail-screen" class="screen" hidden>

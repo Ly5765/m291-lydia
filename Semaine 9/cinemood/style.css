@@ -890,3 +890,64 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================
+   16. FORMULAIRE : PROPOSER UN FILM
+   ========================================= */
+
+#proposer {
+  margin-top: var(--space-5);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  background: var(--color-surface);
+}
+
+#proposer h2 {
+  margin: 0 0 var(--space-1);
+  font-size: var(--font-size-large);
+}
+
+#proposer label {
+  display: block;
+  margin-top: var(--space-2);
+  font-weight: 700;
+}
+
+#proposer input {
+  width: 100%;
+  min-height: 48px;
+  margin-top: var(--space-1);
+  padding: 8px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+}
+
+#proposer input:focus-visible {
+  border-color: var(--color-accent);
+}
+
+#erreurs {
+  min-height: 1.5em;
+  margin: var(--space-2) 0 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+#proposer button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: var(--space-2);
+  padding: 12px 16px;
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--color-accent);
+  color: #481225;
+  font-weight: 700;
+}
+
+#proposer button:hover {
+  background: var(--color-accent-hover);
+}

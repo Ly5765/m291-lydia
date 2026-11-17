@@ -356,3 +356,44 @@ fetch("data.json")
     zoneEtat.textContent = "Impossible de charger les films. Recharge la page dans un moment.";
     copierEtat();
   });
+
+// ----- Formulaire : proposer un film (semaine 12) -----
+const formulaire = document.getElementById("proposer");
+
+formulaire.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const donnees = new FormData(formulaire);
+  const titre = donnees.get("titre").trim();
+  const annee = Number(donnees.get("annee").trim());
+
+  const erreurs = [];
+
+  if (titre.length < 2) {
+    erreurs.push("Le titre doit avoir au moins 2 caractères.");
+  }
+  if (!Number.isInteger(annee) || annee < 1895 || annee > 2026) {
+    erreurs.push("L'année doit être un nombre entre 1895 et 2026.");
+  }
+
+  const zoneErreurs = document.getElementById("erreurs");
+  if (erreurs.length > 0) {
+    zoneErreurs.textContent = "Erreur : " + erreurs.join(" ");
+    return;
+  }
+  zoneErreurs.textContent = "";
+
+  tousLesLieux.unshift({
+    id: tousLesLieux.length + 1,
+    titre: titre,
+    annee: annee,
+    duree: "À confirmer",
+    mood: "À classer",
+    affiche: "",
+    description: "Proposé par un visiteur, à vérifier."
+  });
+
+  afficherAccueil();
+  mettreAJourRecherche();
+  formulaire.reset();
+});
