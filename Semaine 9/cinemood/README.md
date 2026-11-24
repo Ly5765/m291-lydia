@@ -11,3 +11,36 @@
 - La recherche filtre les films à chaque lettre tapée, dans le titre, le mood et l’année. Un message s’affiche quand aucun film ne correspond.
 - Le formulaire « Proposer un film » vérifie deux règles : un titre d’au moins 2 caractères et une année entre 1895 et 2026. Les erreurs s’affichent dans la zone `#erreurs`, sans `alert`.
 - Les fiches ajoutées par le formulaire restent affichées jusqu'au rechargement de la page : il n'y a pas de serveur pour les enregistrer.
+
+
+## Micro-interactions
+
+- Les boutons (moods, filtres, cartes de films, navigation, « Proposer ») changent de couleur en douceur et montrent un halo rose au survol. Ils disent : « ceci se clique, je vous ai entendu ».
+- Les cartes de films apparaissent en fondu, au chargement et à chaque recherche ou filtre. Elles disent : « la liste a changé ».
+- Le message d'erreur du formulaire « Proposer un film » apparaît en fondu dans `#erreurs`. Il dit : « regardez ici, il y a quelque chose à corriger ».
+- Les trois mouvements sont coupés avec `@media (prefers-reduced-motion: reduce)` : les changements ont toujours lieu, mais d'un coup.
+
+## Crédits des images
+
+Les vraies affiches de ces films sont protégées : ces 20 films utilisent à la place une photo d'ambiance libre de droits (licence Unsplash), chargée depuis images.unsplash.com.
+
+- Get Out : photo de Miska Sage sur Unsplash
+- The Truman Show : photo de Viktor Mogilat sur Unsplash
+- Paddington : photo de Matt Walsh sur Unsplash
+- Very Bad Trip : photo de Julian Paefgen sur Unsplash
+- La La Land : photo de Martin Adams sur Unsplash
+- Seven : photo de Filip Mroz sur Unsplash
+- Conjuring : photo de m wrona sur Unsplash
+- Forrest Gump : photo de Evie S. sur Unsplash
+- Le Dîner de cons : photo de Wesley Tingey sur Unsplash
+- Titanic : photo de Alonso Reyes sur Unsplash
+- Prisoners : photo de Suhyeon Choi sur Unsplash
+- Ça : photo de Denisse Leon sur Unsplash
+- Coco : photo de Filza H sur Unsplash
+- Le Loup de Wall Street : photo de Viktorija Demjanenko sur Unsplash
+- Nos étoiles contraires : photo de Olena Bohovyk sur Unsplash
+- Memento : photo de Nik sur Unsplash
+- A Quiet Place : photo de Jesse Gardner sur Unsplash
+- Le Roi Lion : photo de Andreas Vonlanthen sur Unsplash
+- Astérix et Obélix : Mission Cléopâtre : photo de Alex Azabache sur Unsplash
+- Before Sunrise : photo de Viktor Vilyus sur Unsplash
